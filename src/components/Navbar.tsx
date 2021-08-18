@@ -2,11 +2,14 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'gatsby'
 import { Cross as Hamburger } from 'hamburger-react'
+import { useWindowWidth } from '@react-hook/window-size'
 
 import { Color, widthLessThan, Breakpoints, widthMoreThan, focusRing } from '../theme'
 import useToggle from '../hooks/use-toggle'
 
+import Content from './Content'
 import Logo from './Logo'
+import Section from './Section'
 
 const NAV_ROUTES = [
   { name: 'About Us', url: '/about' },
@@ -17,38 +20,31 @@ const NAV_ROUTES = [
 ]
 
 const useStyles = createUseStyles( {
-  navbar: {
-    background: Color.avaniPurple,
-    color: Color.white,
+  navMenu: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
     [ widthLessThan( Breakpoints.tablet ) ]: {
       flexDirection: 'column',
       alignItems: 'unset',
     },
-    position: 'relative',
   },
   navItem: {
     fontWeight: 'normal',
-    padding: '.4rem .4rem',
-    margin: '.2rem 0.5rem 0',
-    border: `0.15rem solid ${Color.avaniPurple}`,
+    padding: '.5rem',
+    border: `0.15rem solid ${Color.AvaniPurple}`,
     color: 'rgba( 255, 255, 255, 0.85 )',
     '&.currentItem': {
-      borderBottomColor: `${Color.link}`,
+      borderBottomColor: `${Color.Link}`,
     },
     '&:hover': {
-      color: `${Color.white}`,
+      color: `${Color.White}`,
     },
     ...focusRing(),
     [ widthLessThan( Breakpoints.tablet ) ]: {
       '& > span': {
         display: 'none',
       },
-      padding: 0,
-    },
-    '& > span': {
-      marginLeft: 5,
     },
     display: 'flex',
     justifyContent: 'center',
@@ -59,6 +55,7 @@ const useStyles = createUseStyles( {
       display: 'none',
     },
     position: 'absolute',
+    marginLeft: -22,
   },
 } )
 
@@ -78,18 +75,29 @@ const NavItems = () => {
 const Navbar = () => {
   const [ isExpanded, toggleExpansion ] = useToggle()
   const classes = useStyles()
+  const width = useWindowWidth()
 
   return (
-    <nav className={classes.navbar}>
-      <div className={classes.menuButton}>
-        <Hamburger size={20} onToggle={toggleExpansion} direction="right" toggled={isExpanded} />
-      </div>
-      <Link to="/" className={classes.navItem}>
-        <Logo width={38} height={38} />
-        <span>Shabad OS</span>
-      </Link>
-      {isExpanded && <NavItems />}
-    </nav>
+    <Section
+      background={Color.AvaniPurple}
+      color={Color.White}
+    >
+      <Content>
+        <div className={classes.navMenu}>
+          <div className={classes.menuButton}>
+            <Hamburger size={20} onToggle={toggleExpansion} direction="right" toggled={isExpanded} />
+          </div>
+          <Link to="/" className={classes.navItem}>
+            <Logo
+              width={width > Breakpoints.tablet ? 24 : 32}
+              height={width > Breakpoints.tablet ? 24 : 32}
+            />
+            <span>Shabad OS</span>
+          </Link>
+          {isExpanded && <NavItems />}
+        </div>
+      </Content>
+    </Section>
   )
 }
 
