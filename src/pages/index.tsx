@@ -101,7 +101,7 @@ const Home = () => {
             <Typography format="header">
               <Link to="https://docs.shabados.com/database/">{'Learn More >'}</Link>
             </Typography>
-            <img src="/database-hero.png" alt="ShabadOS Database Review" className={classes.heroMedia} />
+            <img src="/database-hero.svg" alt="ShabadOS Database Review" className={classes.heroMedia} />
           </Hero>
         </Section>
         <Section
