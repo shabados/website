@@ -38,10 +38,18 @@ const useStyles = createUseStyles( {
       lineHeight: 1.5,
     },
   },
+  ginormous: {
+    fontSize: '10rem',
+    lineHeight: 1,
+    [ widthLessThan( Breakpoints.tablet ) ]: {
+      fontSize: '4.5rem',
+      lineHeight: 1,
+    },
+  },
 } )
 
 type Classes<Name extends string | number | symbol = string> = { [P in Name]: string; }
-type Format = 'caption' | 'body' | 'header' | 'subtitle' | 'title'
+type Format = 'caption' | 'body' | 'header' | 'subtitle' | 'title' | 'ginormous'
 type TypographyProps = {
   children: ReactChild | ReactChild[],
   format?: Format,
