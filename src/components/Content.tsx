@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles( {
   content: ( props: ContentProps ) => ( {
-    maxWidth: 980,
+    maxWidth: 1024,
     padding: [ 0, 22 ],
     margin: [ 0, 'auto' ],
     textAlign: props.textAlign || 'left',
