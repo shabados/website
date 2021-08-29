@@ -12,8 +12,10 @@ const useStyles = createUseStyles( {
     [ widthLessThan( Breakpoints.tablet ) ]: {
       margin: '4.5rem 0',
       flexWrap: 'wrap',
+      justifyContent: 'center',
     },
     '& img': {
+      width: '100%',
       maxWidth: '600px',
       borderRadius: '0.75rem',
       [ widthLessThan( Breakpoints.tablet ) ]: {
@@ -22,6 +24,7 @@ const useStyles = createUseStyles( {
     },
   },
   text: {
+    maxWidth: '400px',
     alignSelf: 'center',
   },
 } )
