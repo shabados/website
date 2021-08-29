@@ -1,33 +1,16 @@
 import React from 'react'
 import { useWindowWidth } from '@react-hook/window-size'
-import { createUseStyles } from 'react-jss'
 import { Parallax } from 'react-parallax'
 
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
 import Section from '../components/Section'
 import { Breakpoints } from '../theme'
-import Link from '../components/Link'
 import Typography from '../components/Typography'
 import Navbar from '../components/Navbar'
 import Content from '../components/Content'
 
-const useStyles = createUseStyles( () => ( {
-  ib: {
-    display: 'inline-block',
-  },
-  heroMedia: {
-    borderRadius: 8,
-  },
-  hint: {
-    color: '#CCCCCC',
-  },
-} ) )
-
 const Viewer = () => {
   const width = useWindowWidth()
-  const classes = useStyles()
-
   return (
     <>
       <Navbar />
