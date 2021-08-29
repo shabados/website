@@ -10,6 +10,7 @@ import Section from '../components/Section'
 import { Breakpoints, radialSplash } from '../theme'
 import Link from '../components/Link'
 import Typography from '../components/Typography'
+import Navbar from '../components/Navbar'
 
 const useStyles = createUseStyles( () => ( {
   gif: {
@@ -65,58 +66,57 @@ const Home = () => {
 
   return (
     <>
-      <main>
-        <Section
-          background={radialSplash}
-          color="white"
-          padding={`${width > Breakpoints.tablet ? '9rem' : '3.5rem'} 0px`}
-        >
-          <Hero title="Presenter">
-            <Typography format="subtitle">Striving to be more simple, efficient, and powerful than ever.</Typography>
-            <Typography format="header">
-              {isDesktop
-                ? <Link to={presenterDownloadLink}>{'Download >'}</Link>
-                : (
-                  <Typography format="body">
-                    <span className={classes.hint}>
-                      Available on Windows or macOS
-                    </span>
-                  </Typography>
-                )}
-            </Typography>
-            <img src="/live-search.gif" alt="ShabadOS Presenter Search" className={classes.gif} />
-          </Hero>
-        </Section>
-        <Section
-          padding={`${width > Breakpoints.tablet ? '3.5rem' : '2rem'} 0px`}
-        >
-          <Hero title="Database">
-            <Typography format="subtitle">
-              <div className={classes.ib}>Multiple Sources.</div>
+      <Navbar />
+      <Section
+        background={radialSplash}
+        color="white"
+        padding={`${width > Breakpoints.tablet ? '9rem' : '3.5rem'} 0px`}
+      >
+        <Hero title="Presenter">
+          <Typography format="subtitle">Striving to be more simple, efficient, and powerful than ever.</Typography>
+          <Typography format="header">
+            {isDesktop
+              ? <Link to={presenterDownloadLink}>{'Download >'}</Link>
+              : (
+                <Typography format="body">
+                  <span className={classes.hint}>
+                    Available on Windows or macOS
+                  </span>
+                </Typography>
+              )}
+          </Typography>
+          <img src="/live-search.gif" alt="ShabadOS Presenter Search" className={classes.gif} />
+        </Hero>
+      </Section>
+      <Section
+        padding={`${width > Breakpoints.tablet ? '3.5rem' : '2rem'} 0px`}
+      >
+        <Hero title="Database">
+          <Typography format="subtitle">
+            <div className={classes.ib}>Multiple Sources.</div>
               &nbsp;
-              <div className={classes.ib}>Multiple Reviewers.</div>
+            <div className={classes.ib}>Multiple Reviewers.</div>
               &nbsp;
-              <div className={classes.ib}>Single Source of truth.</div>
-            </Typography>
-            <Typography format="header">
-              <Link to="https://docs.shabados.com/database/">{'Learn More >'}</Link>
-            </Typography>
-            <img src="/database-hero.png" alt="ShabadOS Database Review" className={classes.heroMedia} />
-          </Hero>
-        </Section>
-        <Section
-          padding={`${width > Breakpoints.tablet ? '3.5rem' : '2rem'} 0px`}
-        >
-          <Hero title="Viewer">
-            <Typography format="subtitle">Drill down to each line to read expositions and translations</Typography>
-            <Typography format="header">
-              <Link to="https://viewer.shabados.com/">{'Launch >'}</Link>
-              <Link to="https://docs.shabados.com/viewer/guides/proofreading">{'Learn to Proofread >'}</Link>
-            </Typography>
-            <img src="/viewer-hero.svg" alt="ShabadOS Database Review" className={classes.heroMedia} />
-          </Hero>
-        </Section>
-      </main>
+            <div className={classes.ib}>Single Source of truth.</div>
+          </Typography>
+          <Typography format="header">
+            <Link to="https://docs.shabados.com/database/">{'Learn More >'}</Link>
+          </Typography>
+          <img src="/database-hero.png" alt="ShabadOS Database Review" className={classes.heroMedia} />
+        </Hero>
+      </Section>
+      <Section
+        padding={`${width > Breakpoints.tablet ? '3.5rem' : '2rem'} 0px`}
+      >
+        <Hero title="Viewer">
+          <Typography format="subtitle">Drill down to each line to read expositions and translations</Typography>
+          <Typography format="header">
+            <Link to="https://viewer.shabados.com/">{'Launch >'}</Link>
+            <Link to="https://docs.shabados.com/viewer/guides/proofreading">{'Learn to Proofread >'}</Link>
+          </Typography>
+          <img src="/viewer-hero.svg" alt="ShabadOS Database Review" className={classes.heroMedia} />
+        </Hero>
+      </Section>
       <Footer />
     </>
   )
