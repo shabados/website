@@ -33,6 +33,7 @@ export const globalTheme = {
       fontFamily: 'Noto Sans',
       fontSize: 16,
       lineHeight: 1.5,
+      backgroundColor: Color.AvaniPaper,
     },
     '#gatsby-focus-wrapper': {
       minHeight: '100vh',
