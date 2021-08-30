@@ -53,8 +53,8 @@ const Viewer = () => {
           </MediaTile>
           <MediaTile
             order={1}
-            media="/viewer-scroll.svg"
-            alt="Scroll through the Viewer in a traditional format"
+            media="/viewer-translate.svg"
+            alt="Read Google translations of Punjabi veechaar"
           >
             <b>Learn more by clicking on any line.</b>
             {' '}
