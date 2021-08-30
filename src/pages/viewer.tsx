@@ -66,8 +66,8 @@ const Viewer = () => {
           </MediaTile>
           <MediaTile
             order={0}
-            media="/viewer-scroll.svg"
-            alt="Scroll through the Viewer in a traditional format"
+            media="/viewer-update.svg"
+            alt="Stay tuned for new updates"
           >
             <b>With more features on the way.</b>
             {' '}
