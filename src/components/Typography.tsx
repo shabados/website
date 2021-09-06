@@ -9,10 +9,11 @@ const useStyles = createUseStyles( {
     display: 'block',
   },
   body: {
-    fontSize: '1rem',
+    margin: '0.75rem 0',
   },
   caption: {
     fontSize: '0.875rem',
+    margin: '0.75rem 0',
   },
   header: {
     fontSize: '1.3125rem',

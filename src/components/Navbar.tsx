@@ -12,6 +12,7 @@ import Logo from './Logo'
 import Section from './Section'
 
 const NAV_ROUTES = [
+  { name: 'About Us', url: '/about-us' },
   { name: 'Viewer', url: '/viewer' },
 ]
 
