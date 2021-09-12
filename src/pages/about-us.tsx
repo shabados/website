@@ -40,7 +40,6 @@ const Viewer = () => {
           <Typography format="title">Name & Mission</Typography>
         </Content>
         <Content>
-          <Typography format="header">What is Shabad OS?</Typography>
           <Typography format="body">
             <div className={classes.quote}>
               ਸਬਦੁ ਭਾਖਤ ਸਸਿ ਜੋਤਿ ਅਪਾਰਾ ॥
