@@ -56,7 +56,7 @@ const Viewer = () => {
             Shabad is commonly defined as a hymn, but could its meaning be something more elusive?
             Our goal is to learn about Shabad through the various writings of the Sikh philosophy
             and then to make them more accessible for others to learn from as well.
-            Hence the OS in our name -- it stands for open-source.
+            Hence the OS in our name – It stands for open-source.
           </Typography>
           <Typography format="body">
             The term open-source originates in a software movement to support open collaboration.
