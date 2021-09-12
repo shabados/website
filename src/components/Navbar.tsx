@@ -37,7 +37,6 @@ const useStyles = createUseStyles( {
     '&:hover': {
       color: `${Color.White}`,
     },
-    ...focusRing(),
     [ widthLessThan( Breakpoints.tablet ) ]: {
       '& > span': {
         display: 'none',

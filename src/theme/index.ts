@@ -14,15 +14,6 @@ export enum Color {
 
 export const radialSplash = `radial-gradient(75vw 70vh at 50% 115%, ${Color.AvaniPink}, ${Color.AvaniPurple} 100%)`
 
-export const focusRing = ( color = 'inherit', borderRadius = '0.5rem' ) => ( {
-  '&:focus': {
-    borderColor: Color.Link,
-    borderRadius,
-    backgroundColor: Color.Aqua200,
-    color,
-  },
-} )
-
 export const globalTheme = {
   '@global': {
     '*': {
@@ -44,14 +35,11 @@ export const globalTheme = {
       },
     },
     a: {
-      outlineStyle: 'none',
-      outlineWidth: 0,
       textDecoration: 'none',
       color: Color.Link,
       '&:hover': {
         color: Color.LinkHover,
       },
-      ...focusRing( 'inherit', '0' ),
     },
   },
 }

@@ -37,7 +37,6 @@ const useStyles = createUseStyles( {
         color: Color.LinkHover,
       },
       padding: '0.75rem',
-      ...focusRing( 'inherit', '0' ),
     },
     [ widthLessThan( Breakpoints.tablet ) ]: {
       '& > span': {
@@ -70,7 +69,6 @@ const useStyles = createUseStyles( {
         '&:hover': {
           color: Color.LinkHover,
         },
-        ...focusRing(),
       },
       [ widthLessThan( Breakpoints.tablet ) ]: {
         borderColor: 'rgba(0,0,0,0.1)',

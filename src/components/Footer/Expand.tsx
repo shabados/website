@@ -3,14 +3,11 @@ import type { DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
 import { createUseStyles } from 'react-jss'
 import cx from 'classnames'
 
-import { focusRing } from '../../theme'
-
 const useStyles = createUseStyles( {
   btn: {
     backgroundColor: 'transparent',
     borderColor: 'transparent',
     cursor: 'pointer',
-    ...focusRing(),
   },
   expandIcon: {
     height: 15,
