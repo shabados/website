@@ -2,7 +2,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 // import type { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-import { Breakpoints, Color, focusRing, widthLessThan, widthMoreThan } from '../../theme'
+import { Breakpoints, Color, widthLessThan, widthMoreThan } from '../../theme'
 import Link from '../Link'
 // import useToggle from '../../hooks/use-toggle'
 import Content from '../Content'

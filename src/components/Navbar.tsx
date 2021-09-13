@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { Cross as Hamburger } from 'hamburger-react'
 import { useWindowWidth } from '@react-hook/window-size'
 
-import { Color, widthLessThan, Breakpoints, widthMoreThan, focusRing } from '../theme'
+import { Color, widthLessThan, Breakpoints, widthMoreThan } from '../theme'
 import useToggle from '../hooks/use-toggle'
 
 import Content from './Content'
